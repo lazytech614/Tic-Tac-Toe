@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #070F2B;
+    color: white;
+    font-family: cursive;
+}
+
+.main-container{
+    max-width: 600px;
+    height: fit-content;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.ended.main-container{
+    display: none;
+}
+
+.playground{
+    height: 500px;
+    width: 500px;
+    background-color: #070F2B;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 28px;
+    padding: 4px;
+}
+
+.btn{
+    border: 2px solid white;
+    border-radius: 6px;
+    background-color: #1B1A55;
+    cursor: pointer;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.zeroIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.zero .zeroIcon{
+    display: flex;
+}
+
+.crossIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.cross .crossIcon{
+    display: flex;
+}
+
+.winner-container{
+    width: fit-content;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    display: none;
+    font-size: 32px;
+
+}
+
+.ended.winner-container{
+    display: flex;
+}
+
+button{
+    border: none;
+    font-size: 24px;
+    padding: 0.2em 0.4em;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+@media(max-width: 768px){
+    .playground{
+        height: 300px;
+        width: 300px;
+        gap: 8px;
+    }
+
+    .btn{
+        font-size: 68px;
+    }
+
+    .winner-container{
+        width: 100%;
+        padding: 0 16px;
+        font-size: 24px;
+    }
+}
